@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { validationSchemaForEnv } from './config/environment-variables';
 import { PersistenceModule } from './persistence/persistence.module';
+import { PiccomaModule } from './ranking/piccoma/piccoma.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { PersistenceModule } from './persistence/persistence.module';
       validationSchema: validationSchemaForEnv,
     }),
     PersistenceModule,
+    PiccomaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
